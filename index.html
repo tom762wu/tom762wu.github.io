@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
       <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -18,10 +21,6 @@
       
       gtag('config', 'G-DZJHZPG6Q1');
       </script>
-
-    
-    <meta charset="utf-8">
-    <title>Hi GitHub</title>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -29,5 +28,15 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <h1>Content</h1>
+    <button onclick="sendData()">submit</button>
+    <script>
+      function sendData() {
+        dataLayer.push({
+          'event': 'transactionEvent',
+          'anyNameForYourCustomVariable': 'ReturningVisitor',
+          date: new Date().getTime()
+        })
+      }
+    </script>
   </body>
 </html>
