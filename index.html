@@ -22,22 +22,68 @@
       gtag('config', 'G-DZJHZPG6Q1');
       </script>
   </head>
+  
   <body>
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM4LQQ4M"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
     <h1>Content</h1>
+    
     <button onclick="sendData()">submit</button>
+    
     <script>
       function sendData() {
         dataLayer.push({
           'event': 'transactionEvent',
           'anyNameForYourCustomVariable': 'ReturningVisitor',
-          'items': ['FM1','FM2','FM3'],
+          'items': [
+                {
+                  item_id: "FM1",
+                  item_name: "FM1_Name",
+                  affiliation: "Google Merchandise Store",
+                  coupon: "SUMMER_FUN",
+                  discount: 2.22,
+                  index: 0,
+                  item_brand: "Google",
+                  item_category: "Apparel",
+                  item_category2: "Adult",
+                  item_category3: "Shirts",
+                  item_category4: "Crew",
+                  item_category5: "Short sleeve",
+                  item_list_id: "related_products",
+                  item_list_name: "Related Products",
+                  item_variant: "green",
+                  location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+                  price: 9.99,
+                  quantity: 1
+              }, 
+                        {
+                  item_id: "FM2",
+                  item_name: "FM2_Name",
+                  affiliation: "Google",
+                  coupon: "Coupon2",
+                  discount: 2,
+                  index: 0,
+                  item_brand: "Google2",
+                  item_category: "Apparel2",
+                  item_category2: "Adult2",
+                  item_category3: "Shirts2",
+                  item_category4: "Crew2",
+                  item_category5: "Short sleeve2",
+                  item_list_id: "related_products2",
+                  item_list_name: "Related Products2",
+                  item_variant: "green2",
+                  location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo2",
+                  price: 100,
+                  quantity: 2
+            }
+          ],
           date: new Date().getTime()
         })
       }
     </script>
+    
   </body>
 </html>
