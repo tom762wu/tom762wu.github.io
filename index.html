@@ -124,11 +124,13 @@
       }
     </script>
     
-    <button onclick="gtag_add_to_wishlist()">gtag_add_to_wishlist</button>
+<button onclick="sendToGa4()">sendToGa4</button>
     <script>
-      function gtag_add_to_wishlist() {
-          gtag("event", "gtag_add_to_wishlist", {
+      function sendToGa4() {
+        gtag("event", "begin_checkout", {
+          currency: "USD",
           value: 7.77,
+          coupon: "SUMMER_FUN",
           items: [
             {
               item_id: "SKU_12345",
@@ -150,12 +152,10 @@
               price: 9.99,
               quantity: 1
             }
-          ],
-        }
-        )
+          ]
+        });
       }
     </script>
-
     
   </body>
 </html>
