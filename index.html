@@ -123,7 +123,33 @@
         })
       }
     </script>
-    
+
+    <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
+    <script>
+      function AddToCart_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          　"event":"add-to-cart",
+          　"cloud_retail":{
+          　　"eventType":"add-tocart",
+          　　"visitorId":"GA1.1.315127977.1713161842",
+          　　"productDetails":[
+                {"product":{"id":"WB2400000003"},
+          　　   "quantity":1
+          　    }],
+          　"userInfo":{"userId":"20200605000077"},
+          　　"uri":"https://ec.fami.store/tmpo/TMPreorder/P20200030",
+          　　"userId":"20200605000077",
+          　　"trigger":"005989",
+          　　"item_id":"WB2400000003",
+          　　"item_name":"【宮武讚岐V2】測試烏龍麵【７３０ｇ／包】",
+          　　"pageViewId":"preOrder"
+          　}
+          })
+      }
+    </script>
+  
+<br>
 <button onclick="sendToGa4()">sendToGa4</button>
     <script>
       function sendToGa4() {
