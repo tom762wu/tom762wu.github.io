@@ -31,7 +31,7 @@
     
     <h1>Content</h1>
     
-    <button onclick="sendData()">submit</button>
+    <button onclick="sendData()">transactionEvent_to_DataLayer</button>
     <script>
       function sendData() {
         dataLayer.push({
@@ -89,7 +89,7 @@
       }
     </script>
 
-    <button onclick="view_item_list()">view_item_list_button</button>
+    <button onclick="view_item_list()">view_item_list_button_to_DataLayer</button>
     <script>
       function view_item_list() {
         dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object..
