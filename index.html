@@ -23,6 +23,7 @@
       </script>
   </head>
   
+  <mark><strong>發送到GTM</strong></mark>
   <body>
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBVLKDT"
@@ -124,6 +125,9 @@
       }
     </script>
 
+
+<mark><strong>發送到RetailAPI</strong></mark>
+<br>
     <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
     <script>
       function AddToCart_toRetailAPI() {
@@ -131,26 +135,28 @@
         dataLayer.push({
           　"event":"add-to-cart",
           　"cloud_retail":{
-          　　"eventType":"add-tocart",
+          　　"eventType":"add-to-cart",
           　　"visitorId":"GA1.1.315127977.1713161842",
           　　"productDetails":[
                 {"product":{"id":"WB2400000003"},
           　　   "quantity":1
           　    }],
-          　"userInfo":{"userId":"20200605000077"},
+          　  "userInfo":{"userId":"20200605000077"},
           　　"uri":"https://ec.fami.store/tmpo/TMPreorder/P20200030",
-          　　"userId":"20200605000077",
-          　　"trigger":"005989",
-          　　"item_id":"WB2400000003",
-          　　"item_name":"【宮武讚岐V2】測試烏龍麵【７３０ｇ／包】",
           　　"pageViewId":"preOrder"
-          　}
+           },
+          "userId":"20200605000077",
+          "trigger":"005989",
+          "item_id":"WB2400000003",
+          "item_name":"【宮武讚岐V2】測試烏龍麵【７３０ｇ／包】",
           })
       }
     </script>
   
 <br>
 <br>
+
+<mark><strong>發送到GA4</strong></mark>
 <button onclick="sendToGa4()">sendToGa4</button>
     <script>
       function sendToGa4() {
