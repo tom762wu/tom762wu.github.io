@@ -31,7 +31,7 @@
     
     <h1>Content</h1>
     
-    <mark><strong>發送到GTM</strong></mark>
+    <mark><strong>發送到GTM</strong></mark><br>
     <button onclick="sendData()">transactionEvent_to_DataLayer</button>
     <script>
       function sendData() {
@@ -127,7 +127,8 @@
 
 
 <br>
-<mark><strong>發送到RetailAPI</strong></mark>
+<br>
+<mark><strong>發送到RetailAPI</strong></mark><br>
     
     <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
     <script>
@@ -146,11 +147,48 @@
           })
       }
     </script>
-  
 <br>
+    <button onclick="HomePageView_toRetailAPI()">HomePageView_toRetailAPI_without_OuterUserID</button>
+    <script>
+      function HomePageView_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "home-page-view",
+          "cloud_retail": {
+            "pageViewId": "home",
+            "eventType": "home-page-view",
+            "visitorId": "GA1.1.315127977.1713161842",
+            "userInfo": { "userId": "20200605000077" },
+            "uri": "https://ec.fami.store/tmpo/"
+          }
+        })
+      }
+    </script><br>
+    
+    <button onclick="DetailPageView_toRetailAPI()">DetailPageView_toRetailAPI_with_userID</button>
+    <script>
+      function AddToCart_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "detail-page-view",
+          "cloud_retail": {
+            "eventType": "detail-page-view",
+            "visitorId": "GA1.1.315127977.1713161842",
+            "userInfo": { "userId": "20200605000077" },
+            "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030/info/WB2200000064",
+            "productDetails": [{ "product": { "id": "WB2200000064" } }],
+            "pageViewId": "detail"
+          },
+          "userId": "20200605000077",
+          "trigger": "005989",
+          "item_id": "WB2200000064",
+          "item_name": "【非KYC牌】0727新品5(６０ｍｌ＊１８瓶／盒)"
+        })
+      }
+    </script>
+    
 <br>
-
-<mark><strong>發送到GA4</strong></mark>
+<mark><strong>發送到GA4</strong></mark><br>
 <button onclick="sendToGa4()">sendToGa4</button>
     <script>
       function sendToGa4() {
