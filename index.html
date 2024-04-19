@@ -130,24 +130,6 @@
 <br>
 <mark><strong>發送到RetailAPI</strong></mark><br>
     
-    <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
-    <script>
-      function AddToCart_toRetailAPI() {
-        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
-        dataLayer.push({
-          　"event":"add-to-cart",
-          　"cloud_retail":{
-          　　"eventType":"add-to-cart",
-          　　"visitorId":"GA1.1.315127977.1713161842",
-          　　"productDetails":[
-                {"product":{"id":"0167108"},
-          　　   "quantity":1
-          　    }]
-           }
-          })
-      }
-    </script>
-<br>
     <button onclick="HomePageView_toRetailAPI()">HomePageView_toRetailAPI_without_OuterUserID</button>
     <script>
       function HomePageView_toRetailAPI() {
@@ -186,7 +168,25 @@
         })
       }
     </script><br>
-
+    
+  <button onclick="AddToCart_toRetailAPI()">AddToCart_toRetailAPI</button>
+    <script>
+      function AddToCart_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          　"event":"add-to-cart",
+          　"cloud_retail":{
+          　　"eventType":"add-to-cart",
+          　　"visitorId":"GA1.1.315127977.1713161842",
+          　　"productDetails":[
+                {"product":{"id":"0167108"},
+          　　   "quantity":1
+          　    }]
+           }
+          })
+      }
+    </script><br>
+    
     <button onclick="Search_toRetailAPI()">Search_toRetailAPI</button>
     <script>
       function Search_toRetailAPI() {
@@ -209,10 +209,33 @@
           "page_index": 1,
           "trigger": "005989",
           "value": 0
-})
+          })
       }
     </script><br>
 
+    <button onclick="Purchase_toRetailAPI()">Purchase_toRetailAPI</button>
+    <script>
+      function Purchase_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "purchase-complete",
+          "cloud_retail": {
+              "eventType": "purchase-complete",
+              "visitorId": "GA1.1.315127977.1713161842",
+              "productDetails": [{ "product": { "id": "WB2200000064" }, "quantity": 1 }],
+              "purchaseTransaction": { "revenue": 959, "currencyCode": "TWD" },
+              "userInfo": { "userId": "20200605000077" },
+              "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030/new",
+              "pageViewId": "addCommodity"
+          },
+          "userId": "20200605000077",
+          "trigger": "005989",
+          "item_id": "WB2200000064",
+          "item_name": "【非KYC牌】0727新品5",
+          "value": 959
+        })
+      }
+    </script><br>
 <br>
 <mark><strong>發送到GA4</strong></mark><br>
 <button onclick="sendToGa4()">sendToGa4</button>
