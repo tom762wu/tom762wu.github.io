@@ -187,6 +187,31 @@
       }
     </script><br>
 
+    <button onclick="Search_toRetailAPI()">Search_toRetailAPI</button>
+    <script>
+      function Search_toRetailAPI() {
+        dataLayer.push({ cloud_retail: null });  // Clear the previous ecommerce object..
+        dataLayer.push({
+          "event": "search",
+          "cloud_retail": {
+              "eventType": "search",
+              "visitorId": "GA1.1.315127977.1713161842",
+              "searchQuery": "雞腿",
+              "offset": 1,
+              "userInfo": { "userId": "20200605000077" },
+              "uri": "https://ec.fami.store/tmpo/TMPreorder/P20200030",
+              "referrerUri": "https://ec.fami.store/tmpo",
+              "pageViewId": "preOrder",
+              "productDetails": []
+          },
+          "userId": "20200605000077",
+          "page_index": 1,
+          "trigger": "005989",
+          "value": 0
+})
+      }
+    </script><br>
+
 <br>
 <mark><strong>發送到GA4</strong></mark><br>
 <button onclick="sendToGa4()">sendToGa4</button>
